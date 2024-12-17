@@ -1,66 +1,20 @@
-## Foundry
+# Block Explorer
+### 1. Create a unique Alchemy API key
+If you have not already done so, create a unique Alchemy API Mainnet key for your project as described here.
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+### 2. Add your API key to as an environment variable for the project
+Create an empty .env file in the base directory of this project.
 
-Foundry consists of:
+Add the following line to the .env file replacing YOUR_ALCHEMY_API_KEY with your api key.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+REACT_APP_ALCHEMY_API_KEY=YOUR_ALCHEMY_API_KEY
+Do not remove the REACT_APP_ prefix. React uses that to import env variables.
 
-## Documentation
+### 3. Start the webserver
+`npm start`
 
-https://book.getfoundry.sh/
+Running the command above will run the app in the development mode. Open http://localhost:3000 to view it in your browser.
 
-## Usage
+The webpage will automatically reload when you make code changes.
 
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+What you'll see in the browser is Ethereum Mainnet's current block number.
